@@ -57,7 +57,7 @@ $$
 
 재료벡터들의 가능한 모든 선형결합의 집합.   
 
-![img](boostcourse/img/2. Linear system & transform/Span.png)   
+![img](../img/2_Linear system & transform/Span.png)   
 \<Span{v1, v2}>
 
 </br>
