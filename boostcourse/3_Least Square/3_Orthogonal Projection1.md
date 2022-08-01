@@ -23,9 +23,25 @@ $$\mathbf{\hat{x}} = (A^{T}A)^{-1}A^{T}\mathbf{b}, \quad f(\mathbf{b}) = A(A^{T}
   $$\mathbf{\hat{y}} = {\mathbf{y} \cdot \mathbf{u} \over \lVert \mathbf{u} \rVert}{1 \over \lVert \mathbf{u} \rVert}\mathbf{u} \qquad if\ \mathbf{u}\ is\ a\ unit\ vector,\quad \mathbf{\hat{y}} = (\mathbf{y} \cdot \mathbf{u})\mathbf{u}$$
   3. $\mathbf{y} - \mathbf{\hat{y}}$
   
+  </br>
+  
 - Orthogonal Projection $\mathbf{\hat{y}}$ of $\mathbf{y}$ onto plane(Orthogonal basis)   
 ![img](../img/3_Least Square/Orthogonal Projection onto plane.png)
-  1. 각각의 basis vector에 projection한 $\mathbf{\hat{y}}$ 의 크기를 구한다.
-  $$\lVert\mathbf{\hat{y}}\rVert = {\mathbf{y} \cdot \mathbf{u}_{n} \over \mathbf{u} \cdot \mathbf{u}}$$
+  1. 각각의 basis vector에 projection한 $\mathbf{\hat{y}}\_{n}$ 의 크기를 구한다.
+  $$\lVert\mathbf{\hat{y}}\_{n}\rVert = {\mathbf{y} \cdot \mathbf{u}\_{n} \over \lVert\mathbf{u}\_{n}\rVert}$$
   2. 각각의 basis vector 방향의 단위벡터를 곱해준다.
+  $$\lVert\mathbf{\hat{y}}\_{n}\rVert = {\mathbf{y} \cdot \mathbf{u}\_{n} \over \mathbf{u}\_{n} \cdot \mathbf{u}\_{n}} \qquad if\ \mathbf{u}\ is\ a\ unit\ vector,\quad \mathbf{\hat{y}\_{n}} = (\mathbf{y} \cdot \mathbf{u}\_{n})\mathbf{u}\_{n}$$
   3. basis vector들은 orthogonal하므로, 모두 더하면 평면에 projection한 $\mathbf{\hat{y}}$를 구할 수 있다. 
+  $$\mathbf{\hat{y}} = \sum {\mathbf{y} \cdot \mathbf{u}\_{n} \over \mathbf{u}\_{n} \cdot \mathbf{u}\_{n}}$$
+
+</br>
+
+만약 orthonormal basis $\\{\mathbf{u}\_{1}, \mathbf{u}\_{2}\\}$에 대하여 $\mathbf{b}$의 projection $\mathbf{\hat{b}}$를 구해본다면,   
+$$\mathbf{\hat{b}} = f(\mathbf{b}) = (\mathbf{b} \cdot \mathbf{u_{1}})\mathbf{u_{1}} + (\mathbf{b} \cdot \mathbf{u_{2}})\mathbf{u_{2}} = (\mathbf{u_{1}^{T}}\mathbf{b})\mathbf{u_{1}} + (\mathbf{u_{2}^{T}}\mathbf{b})\mathbf{u_{2}} = \mathbf{u_{1}}(\mathbf{u_{1}^{T}}\mathbf{b}) + \mathbf{u_{2}}(\mathbf{u_{2}^{T}}\mathbf{b}) = (\mathbf{u_{1}}\mathbf{u_{1}^{T}} + \mathbf{u_{2}}\mathbf{u_{2}^{T}})\mathbf{b}$$
+$$\begin{bmatrix}
+\mathbf{u_{1}} & \mathbf{u_{2}}
+\end{bmatrix}$$ 
+$$\begin{bmatrix}
+\mathbf{u_{1}^{T}}\\
+\mathbf{u_{2}^{T}}
+\end{bmatrix} \mathbf{b} = UU^{T}b$$
