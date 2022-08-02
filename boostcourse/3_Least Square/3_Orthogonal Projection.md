@@ -47,10 +47,9 @@ $$=\begin{bmatrix}
 \mathbf{u_{2}^{T}}
 \end{bmatrix} \mathbf{b} = UU^{T}\mathbf{b}$$
 
-Least Square problem에서 A가 orthonormal한 column들을 가지고 있다고 생각해보자.
-
-A = U = \[ $\mathbf{u_{1}} \quad \mathbf{u_{2}}$ \] 이므로 $\mathbf{\hat{b}} = A\mathbf{\hat{x}} = A(A^{T}A)^{-1}A^{T}\mathbf{b} = f(\mathbf{b})$ 에서 $A^{T}A$는 항등행렬.   
-따라서 Least Square problem에서 A가 orthonormal할 때는, orthonormal한 basis를 가진 subspace에 projection하는 것과 동일하다.
+1. Least Square problem에서 A가 orthonormal한 column들을 가지고 있다고 생각해보자.   
+  A = U = \[ $\mathbf{u_{1}} \quad \mathbf{u_{2}}$ \] 이므로 $\mathbf{\hat{b}} = A\mathbf{\hat{x}} = A(A^{T}A)^{-1}A^{T}\mathbf{b} = f(\mathbf{b})$ 에서 $A^{T}A$는 항등행렬.   
+  따라서 Least Square problem에서 A가 orthonormal할 때는, orthonormal한 basis를 가진 subspace에 projection하는 것과 동일하다.
 
 $$A^{T}A = \begin{bmatrix}
 \mathbf{u_{1}^{T}} \\
@@ -58,3 +57,6 @@ $$A^{T}A = \begin{bmatrix}
 \end{bmatrix} \begin{bmatrix}
 \mathbf{u_{1}} & \mathbf{u_{2}}
 \end{bmatrix} = I \qquad Thus, \quad \mathbf{\hat{b}} = A\mathbf{\hat{x}} = A(A^{T}A)^{-1}A^{T}\mathbf{b} = A(I)^{-1}A^{T}\mathbf{b} = AA^{T}\mathbf{b} = UU^{T}\mathbf{b}$$
+
+2. A의 column들이 orthogonal하지 않다고 생각해보자.   
+   >A : feature matrix(data sample), b : target vector, x : co-efficient -> 찾고자 하는 값
