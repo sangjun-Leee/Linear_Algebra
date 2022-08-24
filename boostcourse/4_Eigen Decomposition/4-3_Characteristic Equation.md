@@ -6,5 +6,4 @@ $$T(x) = Ax = \lambda x$$
 어떤 $\lambda$에 대한 eigenvector들의 span을 eigenspace라고 한다.   
 eigenspace는 $A-\lambda$의 Null space이기도 하다.
 
-![img]()
-
+![img](boostcourse/img/4_Eigen Decomposition/eigenspace.png)
